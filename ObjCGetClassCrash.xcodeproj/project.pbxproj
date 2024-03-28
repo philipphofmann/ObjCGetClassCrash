@@ -14,6 +14,8 @@
 		627CF13A2BB5ACF900CF1C18 /* ObjCGetClassCrashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627CF1392BB5ACF900CF1C18 /* ObjCGetClassCrashTests.swift */; };
 		627CF1442BB5ACF900CF1C18 /* ObjCGetClassCrashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627CF1432BB5ACF900CF1C18 /* ObjCGetClassCrashUITests.swift */; };
 		627CF1462BB5ACF900CF1C18 /* ObjCGetClassCrashUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627CF1452BB5ACF900CF1C18 /* ObjCGetClassCrashUITestsLaunchTests.swift */; };
+		627CF1552BB5ADAB00CF1C18 /* GetClassCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 627CF1542BB5ADAB00CF1C18 /* GetClassCrash.m */; };
+		627CF1572BB5AE0A00CF1C18 /* RoomPlanWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627CF1562BB5AE0A00CF1C18 /* RoomPlanWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,10 @@
 		627CF13F2BB5ACF900CF1C18 /* ObjCGetClassCrashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjCGetClassCrashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		627CF1432BB5ACF900CF1C18 /* ObjCGetClassCrashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjCGetClassCrashUITests.swift; sourceTree = "<group>"; };
 		627CF1452BB5ACF900CF1C18 /* ObjCGetClassCrashUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjCGetClassCrashUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		627CF1522BB5AD7B00CF1C18 /* GetClassCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetClassCrash.h; sourceTree = "<group>"; };
+		627CF1532BB5ADAB00CF1C18 /* ObjCGetClassCrash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjCGetClassCrash-Bridging-Header.h"; sourceTree = "<group>"; };
+		627CF1542BB5ADAB00CF1C18 /* GetClassCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetClassCrash.m; sourceTree = "<group>"; };
+		627CF1562BB5AE0A00CF1C18 /* RoomPlanWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomPlanWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,10 @@
 			children = (
 				627CF1282BB5ACF800CF1C18 /* ObjCGetClassCrashApp.swift */,
 				627CF12A2BB5ACF800CF1C18 /* ContentView.swift */,
+				627CF1562BB5AE0A00CF1C18 /* RoomPlanWrapper.swift */,
+				627CF1532BB5ADAB00CF1C18 /* ObjCGetClassCrash-Bridging-Header.h */,
+				627CF1522BB5AD7B00CF1C18 /* GetClassCrash.h */,
+				627CF1542BB5ADAB00CF1C18 /* GetClassCrash.m */,
 				627CF12C2BB5ACF900CF1C18 /* Assets.xcassets */,
 				627CF12E2BB5ACF900CF1C18 /* Preview Content */,
 			);
@@ -195,6 +205,7 @@
 				TargetAttributes = {
 					627CF1242BB5ACF800CF1C18 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 					627CF1342BB5ACF900CF1C18 = {
 						CreatedOnToolsVersion = 15.3;
@@ -257,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627CF1552BB5ADAB00CF1C18 /* GetClassCrash.m in Sources */,
 				627CF12B2BB5ACF800CF1C18 /* ContentView.swift in Sources */,
 				627CF1292BB5ACF800CF1C18 /* ObjCGetClassCrashApp.swift in Sources */,
+				627CF1572BB5AE0A00CF1C18 /* RoomPlanWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ObjCGetClassCrash/Preview Content\"";
@@ -430,6 +444,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,6 +453,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.sentry.ObjCGetClassCrash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjCGetClassCrash/ObjCGetClassCrash-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ObjCGetClassCrash/Preview Content\"";
@@ -459,6 +477,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +486,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.sentry.ObjCGetClassCrash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjCGetClassCrash/ObjCGetClassCrash-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
